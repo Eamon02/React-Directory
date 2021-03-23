@@ -4,7 +4,7 @@ import "../styles/Table.css";
 function Table() {
   return (
     <>
-      <table>
+      <table className= "highlight">
         <thead>
           <tr>
             <th>Name</th>
