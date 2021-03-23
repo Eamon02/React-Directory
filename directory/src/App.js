@@ -1,7 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 import 'materialize-css/dist/css/materialize.min.css';
-import table from './components/table';
+import Table from './components/Table';
 
 function App() {
   return (
@@ -9,11 +9,13 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
-          <code>React Directory</code>
+          React Directory
         </h1>
+
+      <Table />
+
       </header>
 
-      <table />
 
     </div>
   );

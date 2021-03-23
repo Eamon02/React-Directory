@@ -1,6 +1,7 @@
 import React from "react";
+import "../styles/Table.css";
 
-function table() {
+function Table() {
   return (
     <>
       <table>
@@ -34,4 +35,4 @@ function table() {
   );
 }
 
-export default table;
+export default Table;
