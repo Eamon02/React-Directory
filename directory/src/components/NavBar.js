@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 import '../styles/App.css';
+import '../styles/NavBar.css';
 
 function NavBar() {
     return (
       <>
          <nav className="blue">
-    <div class="nav-extended">
-    <a href="#!" class="brand-logo">React Directory</a>
+    <div className="nav-extended">
+    <a href="#!" className="brand-logo">React Directory</a>
     </div>
   </nav>
       </>

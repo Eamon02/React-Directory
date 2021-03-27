@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       <NavBar/>
       <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
+      {/* <img src={logo} className="App-logo" alt="logo" /> */}
       <Table />
-
       </header>
+      
 
 
     </div>
