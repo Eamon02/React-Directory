@@ -11,6 +11,7 @@ function Row(props) {
           {props.employee.name.first} {props.employee.name.last}
         </td>
         <td>{props.employee.email}</td>
+        <td>{props.employee.cell}</td>
       </tr>
     </>
   );

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './styles/App.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import Table from './components/Table';
@@ -8,9 +7,8 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <header className="App-header">
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
       <Table />
+      <header className="App-header">
       </header>
       
 

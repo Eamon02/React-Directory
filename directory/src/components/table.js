@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import logo from '../logo.svg';
 import "../styles/Table.css";
 import API from "../utils/API";
 import Row from "./Row";
@@ -29,15 +30,22 @@ class Table extends Component {
   }
 
   filter = (event) => {
-    this.setState(prev => ({...prev, search: event.target.value, filteredE: prev.employees.filter(e => {
-      return e.name.first.toUpperCase().includes(event.target.value.toUpperCase()) ||
-      e.name.last.toUpperCase().includes(event.target.value.toUpperCase())
-    })}))
+    this.setState((prev) => ({
+      ...prev,
+      search: event.target.value,
+      filteredE: prev.employees.filter((e) => {
+        return (
+          e.name.first
+            .toUpperCase()
+            .includes(event.target.value.toUpperCase()) ||
+          e.name.last.toUpperCase().includes(event.target.value.toUpperCase())
+        );
+      }),
+    }));
     // console.log(event.target.value);
+  };
 
-  }
-
-  // sort =  takes in value to sort by 
+  // sort =  takes in value to sort by
   sort = (property) => {
     //change state of filtered list + look up array.sort
     let sortedList;
@@ -57,7 +65,7 @@ class Table extends Component {
           direction = "asc";
         }
         break;
-      default: 
+      default:
     }
     this.setState({
       filteredE: sortedList,
@@ -66,11 +74,13 @@ class Table extends Component {
   };
 
   render() {
-
     return (
       <div>
         {this.state.loading || !this.state.employees ? (
-          <div>Loading...</div>
+          <>
+            <img src={logo} className="App-logo" alt="logo" />
+            <div>Loading...</div>
+          </>
         ) : (
           <div>
             <Search
@@ -81,9 +91,15 @@ class Table extends Component {
               <thead>
                 <tr>
                   <th></th>
-                  <th><button onClick = {() => this.sort('name')}>Name</button></th>
-                  <th><button onClick = {() => this.sort('email')}>Email</button></th>
-                  <th><button onClick = {() => this.sort('Phone')}>Phone</button></th>
+                  <th>
+                    <button className="btn" onClick={() => this.sort("name")}>Name</button>
+                  </th>
+                  <th>
+                    Email
+                  </th>
+                  <th>
+                    Phone
+                  </th>
                 </tr>
               </thead>
 

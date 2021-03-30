@@ -1,19 +1,20 @@
-import React from 'react';
-// import logo from '../logo.svg';
-import '../styles/App.css';
-import '../styles/NavBar.css';
+import React from "react";
+import logo from "../logo.svg";
+import "../styles/NavBar.css";
 
 function NavBar() {
-    return (
-      <>
-         <nav className="blue">
-    <div className="nav-extended">
-    <a href="#!" className="brand-logo">React Directory</a>
-    </div>
-  </nav>
-      </>
-    );
-  }
-  
-  export default NavBar;
-  
+  return (
+    <>
+      <nav>
+        <div class="nav-wrapper blue">
+        <img src={logo} className="App-logo sidenav-trigger" alt="logo" />
+          <a href="#!" class="brand-logo">
+           Reacty Directory
+          </a>
+        </div>
+      </nav>
+    </>
+  );
+}
+
+export default NavBar;
